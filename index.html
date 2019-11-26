@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Weather App</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WeatherApp</a>
+    </div>
+  </div>
+</nav>
+
+<div class = "page-header">
+<div class="container">
+   <h2>Weather forecast</h2>
+</div>
+</div>
+
+<div class="jumbotron text-center">
+<form id="form" class="form-inline">
+  <div class="form-group">
+  <input type="text" id="cityname" class="form-control" placeholder="Your city name">
+  <input type="button" id="seachcity" class="btn btn-default" value="Search">
+  <input type="button" id="getlocation" class="btn btn-link" value=" &#9664; Current location">
+  </div>
+</form>
+</div>
+
+<div class="container">
+<div id="tips">
+    <h3>How it works:</h3>
+    <ul>
+    <li>Put the city's name and get the current weather and forecasts in your city. Example - <b>Kyiv</b>. </li>
+    <li> If nothing happens, make sure that your writing is correct.</li>
+    </ul>
+</div>
+
+<div id="tabs" style="display:none;">
+<h2>Current weather and forecasts in your city</h2>
+<ul class="nav nav-tabs nav-justified">
+  <li class="active"><a data-toggle="tab" href="#current">Current</a></li>
+  <li><a data-toggle="tab" href="#daily">Daily</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="current" class="tab-pane fade in active">
+  <h3 id="cheader"></h3>
+  <h3 id="temperature"></h3>
+  <p id="description"></p>
+  <p id="dt"></p>
+  <table class="table table-striped">
+  <tbody id="ctable">
+  <tr>
+  <td>Wind</td>
+  <td id="wind"></td>
+  </tr>
+  <tr>
+  <td>Cloudiness</td>
+  <td id="cloudiness"></td>
+  </tr>
+  <tr>
+  <td>Pressure</td>
+  <td id="pressure"></td>
+  </tr>
+  <tr>
+  <td>Humidity</td>
+  <td id="humidity"></td>
+  </tr>
+  <tr>
+  <td>Sunrise</td>
+  <td id="sunrise"></td>
+  </tr>
+  <td>Sunset</td>
+  <td id="sunset"></td>
+  </tr>
+  <td>Geo coords</td>
+  <td id="coords"></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+
+  <div id="daily" class="tab-pane fade">
+  <h3 id="dheader"></h3>
+  <table class="table">
+  <tbody id="dtable">
+  </tbody>
+  </table>
+  </div>
+<p class="small">The weather forecast is displayed in accordance with your local time. Please pay attention to it when you will watch the weather in another time zone.</p>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container text-center">
+  <p>&#169; 2019 WeatherApp &#174; All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>

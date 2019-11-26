@@ -1,0 +1,36 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom:100px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #222;
+  color:white;
+}
+h2{
+	color: #3CB371;
+}
+.jumbotron {
+	background-color: #3CB371;
+}
+.btn-link,.btn-link:hover{
+	color:black;
+}
+.nav-tabs > li > a{
+	color: #3CB371;
+}
+.navbar {
+  border-radius: 0px;
+}
+.page-header h2 {
+  margin-top:0px;
+}
